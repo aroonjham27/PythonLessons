@@ -12,20 +12,29 @@ def aot():
 '''    
 aot()
 
-print("tom and jerry")
-thisdict = {
-    "student1": "Liya",
-    "student2": "Niharika",
-    "student3": "Vaishnavi"}
+### function with arguments
 
-print("hello world")
+def my_function(fname, lname):
+  print(fname + " " + lname)
 
-aot()
+my_function("Aroon", "Jham") 
 
-print("potatoes and tomatoes are cousins")
+### function with arguments that have a default
 
-print("my potato ran away last night")
+def my_function(country = "Pluto"):
+  print("I am from " + country)
 
-aot()
+my_function("Sweden")
+my_function("India")
+my_function()
+my_function("Brazil") 
 
-'''
+#### function that takes list as an argument
+
+def my_longName(name):
+    x = " ".join(name)
+    print(x)
+
+myname = ["William", "Cherryflavor", "Longbottom", "Jr."]
+
+my_longName(myname)
