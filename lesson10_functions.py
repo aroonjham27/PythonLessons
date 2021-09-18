@@ -31,6 +31,16 @@ my_function("Brazil")
 
 #### function that takes list as an argument
 
+def my_function(food):
+  for x in food:
+    print(x)
+
+fruits = ["apple", "banana", "cherry"]
+
+my_function(fruits)
+
+## Another fun example 
+
 def my_longName(name):
     x = " ".join(name)
     print(x)
