@@ -48,3 +48,42 @@ def my_longName(name):
 myname = ["William", "Cherryflavor", "Longbottom", "Jr."]
 
 my_longName(myname)
+
+######### Part 2 ###################
+
+## Introduction to *args. *operator unpacks an iterable
+
+# option 1
+def my_sum(a, b):
+    return a + b
+
+# option 2
+def my_sum(my_integers):
+    result = 0
+    for x in my_integers:
+        result += x
+    return result
+
+list_of_integers = [1, 2, 3]
+print(my_sum(list_of_integers))
+
+# option 3
+def my_sum(*args):  
+    result = 0
+    # Iterating over the Python args tuple
+    for x in args:
+        result += x
+    return result
+
+print(my_sum(1, 2, 3))
+
+#### introduction to **kwargs. **kwargs unpack
+
+def concatenate(**kwargs):
+    result = ""
+    # Iterating over the Python kwargs dictionary
+    for x in kwargs.values():
+        result += x
+    return result
+
+print(concatenate(a="Real", b="Python", c="Is", d="Great", e="!"))
